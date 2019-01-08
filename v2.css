@@ -299,7 +299,7 @@ max-wrap-1{
         margin: 5px 0;
     }
 
-    .max-wrap-3 .wrap .item .content{
+    .max-wrap-3 .wrap .item textarea{
         margin:5px 0px;
         width: 100%;
     }

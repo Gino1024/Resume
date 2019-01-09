@@ -331,7 +331,7 @@ max-wrap-1{
     }
 
     .banner{
-     max-width: 1400px;
+     width: 1400px;
      display: block;
      margin: auto;
      padding: 90px 0 0 0;
@@ -339,7 +339,7 @@ max-wrap-1{
         
     }
     .banner .item{
-     
+     width:100%;
        
     }
     .banner .item img{

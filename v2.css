@@ -267,7 +267,8 @@ max-wrap-1{
     }
     .about img{
         width: 100%;
-        margin: 10px 0px 0px 0px;
+        
+        vertical-align: bottom;
     }
 
 
@@ -369,7 +370,7 @@ max-wrap-1{
     }
     .banner .item{
      width: 100%;
-     margin-bottom: 15px;
+     vertical-align: bottom;
      
        
     }

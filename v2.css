@@ -1,47 +1,36 @@
 /* 導覽列 */
-
-
 .header{
-    
-    height: 40px;
+    height: 45px;
     background-color: #ffffff;
     border-bottom: rgb(255, 122, 122) 5px solid;
     position: relative;
 }
-.logo{
-        width: 60px;
-        height: 40px;
-        margin-left: 20px;
 
+#menu_control{
+    position: absolute;
+    opacity: 0;
 }
-.logo img{
-    width: 80px;
-    height: 40px;
-
-
-
-  
+/* 導覽列 */
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 10px 0px 10px 10px;
+    font-weight: bolder;
+    transition: .5s;
+    
 }
-.logo img:hover{
-
-
-}
-
 .menu_btn{
     width: 40px;
     height: 40px;
     background-color: #fff;
-    display: block;
+    display:block;
     position: absolute;
     top:0px;
     right: 10px;
 }
-#menu_control{
-    position: absolute;
-    opacity: 0;
-    
-    
-}
+
 
 .menu_btn span {
     opacity: 0;
@@ -65,27 +54,12 @@
     box-shadow: 0px 8px 0px #000,
                 0px -8px 0px #000;
 }
-
-nav{
-    
-}
-
-nav a {
-    display: block;
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-    padding: 10px 0px 10px 10px;
-    font-weight: bolder;
-    transition: .5s;
-    
+#menu_control:checked ~.max-wrap-3 .header nav {
+    left: 0;    
 }
 
 
-#menu_control:checked ~ .header  nav {
-    left:0;
-}
-
+/* 看板圖片 */
 .banner{
     padding: 10px 0 0 0;
 }
@@ -113,6 +87,7 @@ nav a {
  line-height: 1.5;
 }
 
+/* 右邊浮動icon */
 .fixitem{
     position: fixed;
     right: 0;
@@ -136,71 +111,22 @@ nav a {
  
  background-color:#ccc;
 }
-
-
-
-/* 導覽列 */
-
-
 /* 內文 */
 
-.about{
-
-   
-}
-
-.about .wrap{
- margin: 0;
-}
-
-.about .wrap .item{
-    width:100%;
-}
-.about .wrap .item img{
-    width: 100%;
-    max-height: 295px;
-}
-
-.about .wrap .item h3{
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    font-family: 微軟正黑體;
-
-}
-.about .wrap .item p{
-    font-family: 微軟正黑體;
-    line-height: 1.5;
-    display: block;
-    padding: 10px;
-    background-color: rgb(214, 214, 214,.5);
-    
-}
-
-.Skill h1{
+h1{
     font-size: 50px;
     background-color: rgb(214, 214, 214,.5);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-weight: bold;
+  
 }
-.Skill .wrap{
-   
-}
-.Skill .wrap .item{
- 
-    width: 100%;
 
-    margin: 0 50px 40px 5px;
-}
-.Skill .wrap .item img{
-    display: block;
-    margin: auto;
+skill h1{
+    
 }
 
 
-
-/* 內文 */
 
 /* 頁尾 */
 
@@ -216,18 +142,23 @@ nav a {
     line-height: 6;
 }
 
-max-wrap-1{
-    display: block;
-    margin: 0;
-}
-
-/* 頁尾 */
-
 /* phone */
 @media screen and (max-width:767px){
+    .max-wrap-3{
+        width: 100%;
+    }
+    .logo{
+        width: 80px;
+        height: 40px;
+        margin-left: 20px;
+    }
+    .logo img{ 
+        width: 100%;
+    }
+    
     nav{
         width: 80%;
-        height: calc(100vh - 40px);
+        height: calc(100vh - 10px);
         background-color: #ccc;
         position: absolute;
         top:40px;
@@ -242,9 +173,7 @@ max-wrap-1{
         background:rgb(182, 243, 243);
         
     }
-    .about {
 
-    }
     .about h3{
         text-align: center;
         margin: 10px 0px;
@@ -253,115 +182,93 @@ max-wrap-1{
         font-weight: bold;
         font-family: 微軟正黑體;
     }
-    .about li {
-        /* border: 1px solid ; */
 
-    }
     .about p{
         font-family: 微軟正黑體;
         line-height: 1.5;
         display: block;
         padding: 15px;
-        margin: 0px 0px 20px 0px;
+        margin: 0px 0px 0 0px;
         background-color: rgb(214, 214, 214,.5);
     }
     .about img{
-        width: 100%;
-        
+        width: 100%; 
         vertical-align: bottom;
     }
 
-
-    .about .wrap .item{
+    .skill  h1{
+        margin : 10px 0;
         width: 100%;
-
-    
     }
-
-    .about .wrap .item h3{
-        text-align: center;
-        margin: 10px 0;
+    .skill .wrap {
+        width: 100%;
+        
     }
-   
-    .about .wrap .item img{
-        display: block;
+    .skill .wrap .item{
+        width: 45%;
         margin: auto;
     }
-    .about .wrap .item p {
-        margin: 10px;
+    .skill .wrap .item img{
+        width: 100%;
+       display: block;
+       margin:10px 0;
     }
-
-    #menu_control:checked ~.max-wrap-3 .header nav {
-        left: 0;
         
-    }
     
-    .slim{
-        background-color: rgb(214, 214, 214,.5);
-        height: 50px;
-        width: 100%;
-        max-width: 1400px;
-        margin: 20px auto;
-        font-size: 50px;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        font-weight: bold;
-        
 
-        
-    }
-
-    .max-wrap-3 .wrap .item{
-        width: 100%;
-        margin-bottom:10px; 
-    }
-    .max-wrap-3 .wrap .item img{
+    .Contact{
         width: 100%;
     }
-
-    .max-wrap-3 .wrap .item .name{
-        margin: 5px 0;
+    .Contact .wrap .item img{
+        width: 100%;
     }
-    .max-wrap-3 .wrap .item .mail{
-        margin: 5px 0;
+    .Contact .wrap .item form{
+        margin-left: 5px;
     }
-    .max-wrap-3 .wrap .item .phone{
-        margin: 5px 0;
-    }
-
-    .max-wrap-3 .wrap .item textarea{
-        margin:5px 0px;
+    input {
         width: 80%;
-    }
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=submit] {
+        width: 80%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      textarea{
+        width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        
+      }
 
 }
 /*desktop  */
 @media screen and (min-width:768px){
-    .logo img{
-        width: 120px;
-        height: 70px;
-    }
-
-    .max-wrap-1{
-        width: 1400px;
-        height: 595px;
-       
-        margin: auto;
-    }
-    .max-wrap-2{
-        width: 1400px;
-        height: 350px;
-       
-        margin: auto;
-    }
+    
 
     .max-wrap-3{
-        width: 1400px;
+        max-width: 1200px;
+        width: 75%;
         margin: auto;
     }
 
     .banner{
-     width: 1400px;
+     width: 75%;
      display: block;
      margin: auto;
      padding: 90px 0 0 0;
@@ -379,9 +286,6 @@ max-wrap-1{
     margin: auto;
      
     }
-    .banner .item p{
-      
-    }
 
     .menu_btn{
         display: none;
@@ -391,59 +295,66 @@ max-wrap-1{
         margin: auto;
     }
     .header{
-        
+        max-width: 1200px;
         position:fixed;
-        width: 1400px;
+        width: 75%;
         height: 80px;
-        margin: 0 0 0px 0;
+        
         
         
     }
     .header .logo{
+        width: 10%;
         float: left;
+        margin: 20px 0px;
+    }
+    .header .logo img{
+        width: 100%;
+        float: left;
+        margin: auto;
+        
     }
     .header nav{
         float: right;
-       
-    }
-    nav{
-        position: relative;
-        left:0;
-        top:0;
-        background-color: #fff;
-        display: flex;
-        width: auto;
-        height: auto;
-        
+        width: 75%;
+        background-color: #fff;  
     }
     nav a {
-        border: none;
-        margin: 0 0 0 80px;
-        line-height: 3;
+        float: right;
+        margin: 0 0 0 40px;
         display: inline;
+        line-height: 3.3;
+        
     }
     nav a:hover{
-        position: relative;
+       
         color:rgb(182, 243, 243);
         top: 3px;
         
     }
-    .about li:nth-child(1){
-        float: left;
-        width: 300px; 
-        margin-right:33.3333px;   
-    }
-    .about li:nth-child(n+2):nth-child(-n+3){
-        float: left;
-        width: 300px;
-        margin: 0px 33.3333px ;
-    }
-    .about li:nth-child(4){
-        float: right;
-        width: 300px;   
-    }
-
     
+    .about{
+        overflow: hidden;
+    }
+    .about .wrap{
+        margin: 10px 0px;
+    }
+    .about li{
+        float: left;
+        width: calc(25% - 15px);
+        margin: 10px 0;
+    }
+    .about li img{
+        margin-top: 10px;
+        width: 100%;
+        
+        vertical-align: bottom;
+    }
+    .about li:nth-child(n+1):nth-child(-n+3){
+        margin-right:20px;
+    }
+    
+
     .about h3{
         text-align: center;
         margin: 10px 0px;
@@ -460,47 +371,24 @@ max-wrap-1{
         margin: 0px 0px 20px 0px;
         background-color: rgb(214, 214, 214,.5);
     }
-    .about img{
-        width: 100%;
-        height: 350px;
-        vertical-align: bottom;
+
+
+   .skill .wrap{
+        overflow: hidden;
+        }
+    .skill .wrap .item{ 
+        margin: 20px 0px;
+        float: left;
+        width: calc( 25% - 15px); 
         
-    }
-    .clear{
-        content:"";
-        clear: both;
+        }
+    
+    .skill .wrap .item:nth-child(n+1):nth-child(-n+3){
+        margin-right: 20px;
     }
 
-    .about .wrap{
-        display: flex;
-         justify-content: center;
-       
-    }
-    .about .wrap .item{
-        width: 300px;
-        margin: 20px;
-    }
-    .about .wrap .item img{
-        margin: 10px  0px;
-        width: 100%;
-    }
-    .Skill h1{
-        font-size: 50px;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        font-weight: bold;
-    }
-    .Skill .wrap{
-        display: flex;
-    }
-    .Skill .wrap .item{
-        display: flex;
-        width: 300px;
-     
-      
-        margin: 0 50px 0 0;
-    }
-    .Skill .wrap .item img{
+    .skill .wrap .item img{
+        width: 80%;
         display: block;
         margin: auto;
     }
@@ -508,20 +396,15 @@ max-wrap-1{
     .slim{
         background-color: rgb(214, 214, 214,.5);
         height: 50px;
-        width: 1400px;
-        max-width: 1400px;
+        width: 75%;
+        max-width: 1200px;
         margin: 20px auto;
-        font-size: 50px;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        font-weight: bold;
-    
     }
     .slim-bottom{
         background-color: rgb(214, 214, 214,.5);
         height: 50px;
-        width: 1400px;
-        max-width: 1400px;
+        width: 75%;
+        max-width: 1200px;
         margin: 20px auto;
         font-size: 50px;
         font-family: Arial, Helvetica, sans-serif;
@@ -530,21 +413,50 @@ max-wrap-1{
         padding: 0 0 80px 0;
     
     }
-    .max-wrap-3 .wrap{
-        display: flex;
-        justify-content: space-around;
-        justify-items: center;
+   
+    .Contact .wrap .item img{
+        width: 50%;
+        display: block;
+        margin: auto;
+        
     }
-    .max-wrap-3 .wrap .item .name,.max-wrap-3 .wrap .item .mail,.max-wrap-3 .wrap .item .phone,.max-wrap-3 .wrap .item  .content{
-        margin-bottom: 20px;
-    }
-    .max-wrap-3 .wrap .item textarea{
-        width: 400px;
+   
+    input {
+        width: 80%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=submit] {
+        width: 80%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+    
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        
+      
+      }
+      textarea{
+        width: 100%;
         height: 150px;
-    }
+        padding: 12px 20px;
+    
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        
+      }
 
     .footer{
-        width: 1400px;
+        width: 75%;
+        max-width: 1200px;
         
     }
 

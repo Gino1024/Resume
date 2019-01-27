@@ -10,7 +10,7 @@
     position: absolute;
     opacity: 0;
 }
-
+/* 導覽列 */
 nav a {
     display: block;
     text-decoration: none;
@@ -298,20 +298,20 @@ skill h1{
         max-width: 1200px;
         position:fixed;
         width: 75%;
-        height: 80px;
+        padding: 15px;
         
-        
-        
+   
     }
     .header .logo{
-        width: 10%;
+        width: 90px;
         float: left;
-        margin: 20px 0px;
+        
+        
     }
     .header .logo img{
         width: 100%;
         float: left;
-        margin: auto;
+        
         
     }
     .header nav{
@@ -323,7 +323,7 @@ skill h1{
         float: right;
         margin: 0 0 0 40px;
         display: inline;
-        line-height: 3.3;
+        
         
     }
     nav a:hover{

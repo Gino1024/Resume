@@ -3,7 +3,8 @@
     height: 45px;
     background-color: #ffffff;
     border-bottom: rgb(255, 122, 122) 5px solid;
-    position: relative;
+    position: fixed;
+    width: 100%;
 }
 
 #menu_control{
@@ -11,6 +12,29 @@
     opacity: 0;
 }
 /* 導覽列 */
+.fixitem{
+    position: fixed;
+    right: 0;
+    top: 50px;
+
+}
+.fixitem .img-item{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 0 5px 0 ;
+}
+.fixitem .img-item img{
+    width: 30px;
+    height: 30px;
+    
+    
+}
+.fixitem .img-item:hover{
+ 
+ background-color:#ccc;
+}
 nav a {
     display: block;
     text-decoration: none;
@@ -86,29 +110,7 @@ nav a {
 }
 
 /* 右邊浮動icon */
-.fixitem{
-    position: fixed;
-    right: 0;
-    top: 50px;
 
-}
-.fixitem .img-item{
-    width: 30px;
-    height: 30px;
-    background-color: #fff;
-    border-radius: 50%;
-    margin: 0 0 5px 0 ;
-}
-.fixitem .img-item img{
-    width: 30px;
-    height: 30px;
-    
-    
-}
-.fixitem .img-item:hover{
- 
- background-color:#ccc;
-}
 /* 內文 */
 
 h1{
@@ -134,7 +136,7 @@ h3{
 
 .footer{
     width: 100%;
-    height: 100px;
+    
     background-color: #000;
     text-align: center;
     margin: auto;
@@ -157,15 +159,18 @@ h3{
     .logo img{ 
         width: 100%;
     }
+    .banner{
+        padding: 45px 0 0 0;
+    }
     
     nav{
         width: 80%;
-        height: calc(100vh - 10px);
+        height: 641vh;
         background-color: #ccc;
         position: absolute;
-        top:40px;
+        top:50px;
         left:-100% ;
-        opacity: 0.7 ;
+        opacity: 0.8 ;
         transition: 0.5s;
     }
     nav a {
@@ -174,6 +179,13 @@ h3{
     nav a:hover{
         background:rgb(182, 243, 243);
         
+    }
+    nav img{
+        position: absolute;
+        width: 20px;
+        border: 1px solid;
+        border-radius: 50%;
+        right: 0;
     }
 
     .about h3{
@@ -257,6 +269,19 @@ h3{
         box-sizing: border-box;
         
       }
+      .footer .fixitem .img-item img{
+        width: 30px;
+        height: 30px;
+        
+       
+        margin: auto;
+      
+    }
+    .footer .fixitem .img-item{
+        display: inline;
+        
+    }
+    
 
 }
 /*desktop  */
@@ -268,7 +293,7 @@ h3{
         width: 75%;
         margin: auto;
     }
-
+    
     .banner{
      width: 75%;
      display: block;
@@ -335,6 +360,10 @@ h3{
         
     }
     
+    nav img{
+        display: none;
+    }
+
     .about{
         overflow: hidden;
     }
@@ -456,6 +485,6 @@ h3{
     }
 
 
-
+    
  
 }

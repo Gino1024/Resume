@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>GW Resume</title>
 
     <link rel="stylesheet" href="https://gino1024.github.io/Resume/reset.css">
-    <link rel="stylesheet" href="https://gino1024.github.io/Resume/v2.css">
+    <link rel="stylesheet" href="/v2.css">
+    <link rel="shortcut icon" href="">
 </head>
 
-<body>
+<body class=" fade">
     <input type="checkbox" name="menu_control" id="menu_control">
 
     <div class="max-wrap-3" id="home">
-        <div class="header ">
+        <div class="header " style="width: 100%">
             <div class="logo">
-                <a href="https://gino1024.github.io/Resume/index.html"><img src="https://gino1024.github.io/Resume/Image/Logo.png"
-                        alt="logo"></a>
+                <a href="https://gino1024.github.io/Resume/index.html"><img src="/Image/Logo.png" alt="logo"></a>
             </div>
             <label for="menu_control" class="menu_btn">
                 <span>選單</span>
@@ -37,15 +38,27 @@
     </div>
 
 
-    <div class="banner max-wrap-3">
-        <div class="item"> <img src="https://gino1024.github.io/Resume/Image/me.jpg" alt=""></div>
-        <div class="item">
-            <h3> I am Gino Weng</h3>
-            <p>我2018年畢業於致理科技大學資訊管理系，喜歡籃球喜歡網頁設計，靠自學為主，短期目標是成為一位專業的前端工程師。</p>
+    <div class="banner max-wrap-3 ">
+        <div class="slide fade">
+            <img src="/Image/banner-1.png" alt="">
         </div>
+        <div class="slide fade">
+            <img src="/Image/banner-2.png" alt="">
+        </div>
+        <div class="prev" onclick="plusslides(-1)"> &#10094; </div>
+        <div class="next" onclick="plusslides(1)"> &#10095; </div>
+
+        <div class=" dot-selector">
+            <span class="dot" onclick="selectorside(0)"></span>
+            <span class=" dot" onclick="selectorside(1)"></span>
+
+        </div>
+
+
+
     </div>
 
-    <ul id="about" class="about max-wrap-3">
+    <ul id=" about" class="about max-wrap-3">
         <div class="wrap">
             <li>
                 <h3>2017機器人比賽</h3>
@@ -139,17 +152,18 @@
 
     <div class="fixitem">
         <div class="img-item ">
-            <a href="https://www.facebook.com/profile.php?id=100008094613646"> <img src="https://gino1024.github.io/Resume/Image/facebook-logo.png"
-                    alt="facebook"></a>
+            <a href="https://www.facebook.com/profile.php?id=100008094613646"> <img
+                    src="https://gino1024.github.io/Resume/Image/facebook-logo.png" alt="facebook"></a>
         </div>
         <div class="img-item ">
-            <a href="https://www.instagram.com/ginoweng1024/"><img src="https://gino1024.github.io/Resume/Image/instagram.png"
-                    alt="instergram"></a>
+            <a href="https://www.instagram.com/ginoweng1024/"><img
+                    src="https://gino1024.github.io/Resume/Image/instagram.png" alt="instergram"></a>
         </div>
         <div class="img-item"><a href=""><img src="https://gino1024.github.io/Resume/Image/twitter-logo-silhouette.png"
                     alt="twitter"></a>
         </div>
-        <div class="img-item"><a href="#home"><img src="https://gino1024.github.io/Resume/Image/home-icon.png" alt="twitter"></a>
+        <div class="img-item"><a href="#home"><img src="https://gino1024.github.io/Resume/Image/home-icon.png"
+                    alt="twitter"></a>
         </div>
     </div>
 
@@ -159,18 +173,12 @@
         </div>
     </div>
 
-    <script src="/jquery.min.js"></script>
+    <script src="/myjs.js"></script>
+
     <script type="text/javascript">
         function uncheck() {
             document.getElementById("menu_control").checked = false;
-            
         }
-
-
-
-
-
-
 
     </script>
 
